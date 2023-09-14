@@ -3,7 +3,7 @@
 /**
  * print_numbers - prints 0123456789\n
  *
- * Return: void
+ * Return: always 0 (success)
 */
 
 void print_numbers(void)
