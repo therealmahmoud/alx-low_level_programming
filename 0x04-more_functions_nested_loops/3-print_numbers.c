@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print_numbers - prints 0123456789\n
+ * print_numbers - prints 0 - 9
+ * 		only using _putchar twice
  *
  * Return: always 0 (success)
 */
