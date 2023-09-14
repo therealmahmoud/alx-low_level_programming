@@ -2,7 +2,7 @@
 
 /**
  * print_numbers - prints 0 - 9
- * 		only using _putchar twice
+ *		only using _putchar twice
  *
  * Return: always 0 (success)
 */
