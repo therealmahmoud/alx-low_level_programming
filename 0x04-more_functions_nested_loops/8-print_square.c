@@ -9,14 +9,18 @@
 
 void print_square(int size)
 {
-	int rows, columns;
+	int i, j;
 
-	for (rows = 1; rows <= size; rows++)
+	if (size <= 0)
+		_putchar('\n');
+
+	for (i = 0; i < size; i++)
 	{
-		for (colums = 1; columns <= size; columns++)
+		for (j = 0; j < (size); j++)
+		{
 			_putchar('#');
+		}
 		_putchar('\n');
 	}
-	else
-		_putchar('\n');
+
 }
