@@ -2,28 +2,28 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - Returns the sum of all its paramters.
- * @n: The number of paramters passed to the function.
- * @...: A variable number of paramters to calculate the sum of.
+ * sum_them_all - a function returns the sum of all its parameters.
  *
- * Return: If n == 0 - 0.
- *         Otherwise - the sum of all parameters.
+ * @n: numb of valus
+ * @...: valus numb
+ *
+ * Return: the sum of all its parameters
+ *		if n == 0, return 0
  */
 
 int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i;
 	int result;
-	va_list args;
+	va_list sum;
 
 	if (n == 0)
 		return (0);
 
-	va_start(args, n);
+	va_start(sum, n);
 
-	for (i = 0; i <= n; i++)
-		result += va_arg(args, int);
-
-	va_end(args);
+	for (i = 0; i < n; i++)
+		result += va_arg(sum, int);
+	va_end(sum);
 	return (result);
 }
