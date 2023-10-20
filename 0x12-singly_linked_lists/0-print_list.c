@@ -2,23 +2,6 @@
 #include <stdio.h>
 
 /**
- * _strlen - return length of string
- * @s: string whose length to be checked
- *
- * Return: integer length of the string
- */
-int _strlen(char *s)
-{
-	int n = 0;
-
-	if (!s)
-		return (0);
-	while (*s++)
-		n++;
-	return (n);
-}
-
-/**
  * print_list -  a function that prints all the elements of a list_t list.
  * @h: pointer to the first node
  *
