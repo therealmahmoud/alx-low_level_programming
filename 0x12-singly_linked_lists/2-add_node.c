@@ -17,7 +17,7 @@ list_t *ptr;
 	unsigned int length = 0;
 
 	while (str[length])
-		len++;
+		length++;
 
 	ptr = malloc(sizeof(list_t));
 	if (!ptr)
