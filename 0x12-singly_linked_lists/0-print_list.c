@@ -3,9 +3,9 @@
 
 /**
  * print_list -  a function that prints all the elements of a list_t list.
- * @h: pointer to the first node
+ * @h: pointer to the list_t list to print
  *
- * Return: size of list
+ * Return: the number of nodes printed
  */
 size_t print_list(const list_t *h)
 {
