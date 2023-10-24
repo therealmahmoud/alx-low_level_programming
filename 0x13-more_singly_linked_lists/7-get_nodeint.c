@@ -1,22 +1,18 @@
 #include "lists.h"
 
 /**
- * pop_listint - pops head node of list
- * @head: address of pointer to first node
+ * get_nodeint_at_index - returns node at index
+ * @head: pointer to first node
+ * @index: index of node to get
  *
- * Return: value of popped node
+ * Return: pointer to node
  */
-int pop_listint(listint_t **head)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *node;
-	int n;
+	unsigned int n;
 
-	if (!head || !*head)
-		return (0);
-
-	node = (*head)->next;
-	n = (*head)->n;
-	free(*head);
-	*head = node;
-	return (n);
+	for (node = head, n = 0; node && n < index; node = node->next, n++)
+		;
+	return (node);
 }
