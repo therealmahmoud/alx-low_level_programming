@@ -6,8 +6,24 @@
  */
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_table_t *head = ht;
-	hash_node_t *node, *tmp;
+	hash_node_t *current, *tmp;
 	unsigned long int i;
 
+	if (!ht)
+		return;
+
+	for (i = 0; i < ht->size; i++)
+	{
+		current = ht->array[i];
+		while (current)
+		{
+			tmp = current;
+			current = current->next;
+			free(tmp->key);
+			free(tmp->value);
+			free(tmp);
+		}
+	}
+	free(ht->array);
+	free(ht);
 }
